@@ -13,7 +13,7 @@ function Rate({handleClick, index}) {
   </>
 }
 
-function Form({handleSubmit, handleClick, maxRate = 5}) {
+function Form({handleSubmit, handleClick, maxRate = 5, disabled}) {
   const radios = []
 
   for (let n=1; n<maxRate+1; n++) {
@@ -34,7 +34,7 @@ function Form({handleSubmit, handleClick, maxRate = 5}) {
       <div className="rate-container">
         {radios}
       </div>
-      <button>Submit</button>
+      <button disabled={disabled}>Submit</button>
     </form>
   </div>
 }
@@ -49,7 +49,7 @@ function ResultForm({rate, maxRate = 5}) {
 }
 
 function RatingForm() {
-  const [rate, setRate] = useState(1)
+  const [rate, setRate] = useState(0)
   const [isSubmit, setIsSubmit] = useState(false)
   const maxRate = 5
 
@@ -70,7 +70,11 @@ function RatingForm() {
   return <>
     {isSubmit ?
       <ResultForm rate={rate} maxRate={maxRate} /> :
-      <Form handleSubmit={handleSubmit} handleClick={handleClick} maxRate={maxRate} />}
+      <Form 
+        handleSubmit={handleSubmit}
+        handleClick={handleClick}
+        disabled={rate > 0 ? false : true}
+        maxRate={maxRate} />}
   </>
 }
 
