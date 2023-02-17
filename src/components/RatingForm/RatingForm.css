@@ -1,0 +1,151 @@
+:root {
+    --dark-blue: hsl(213, 19%, 18%);
+    --bg-bottom-card: hsl(215, 27%, 12%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --primary: hsl(25, 97%, 53%);
+    --button-height: 42px
+}
+
+/* container */
+
+.container {
+    font-family: 'Overpass';
+    width: 295px;
+    border-radius: 30px;
+    background-image: radial-gradient(circle at top, var(--dark-blue) 0, var(--bg-bottom-card) 100%);
+    padding: 30px;
+    transition: all 0.3s;
+    animation: 1s formSpawn;
+}
+
+.rotate3d-right {
+    transform: rotate3d(0, 1, 0, 88deg);
+}
+
+/* form container */
+
+.star {
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    padding: 1rem;
+
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--medium-grey);
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+label {
+    background-color: var(--dark-blue);
+    height: var(--button-height);
+    width: var(--button-height);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    color: var(--medium-grey);
+    font-size: 15px;
+}
+
+label:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: white;
+}
+
+input[type='radio']:checked + label {
+    cursor: pointer;
+    background-color: var(--light-grey);
+    color: white;
+}
+
+button {
+    margin-top: 30px;
+    border: 0;
+    height: var(--button-height);
+    border-radius: 50px;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--primary);
+    transition: all 0.2s ease-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    color: var(--primary);
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Result rate */
+
+.container.result-container{
+    text-align: center;
+    padding-bottom: 50px;
+    animation: 0.3s 1 resetRotate3d;
+}
+
+.result-container img {
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 15px;
+    color: var(--primary);
+    background-color: var(--dark-blue);
+    border-radius: 50px;
+    font-weight: 400;
+    margin: 20px 0 10px 0;
+    display: inline-block;
+    padding: 7px 1rem 5px 1rem ;
+}
+
+/* Keyframes */
+
+@keyframes resetRotate3d {
+    from {
+        transform: rotate3d(0, 1, 0, 88deg)
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 0deg)
+    }
+}
+
+@keyframes formSpawn {
+    from {
+        transform: translateY(80px) scale(0.7);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
