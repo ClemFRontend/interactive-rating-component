@@ -4,14 +4,14 @@
     --light-grey: hsl(217, 12%, 63%);
     --medium-grey: hsl(216, 12%, 54%);
     --primary: hsl(25, 97%, 53%);
-    --button-height: 42px
+    --button-height: 45px
 }
 
 /* container */
 
 .container {
     font-family: 'Overpass';
-    width: 295px;
+    width: 320px;
     border-radius: 30px;
     background-image: radial-gradient(circle at top, var(--dark-blue) 0, var(--bg-bottom-card) 100%);
     padding: 30px;
@@ -43,6 +43,7 @@ p {
     font-weight: 400;
     color: var(--medium-grey);
     margin-top: 10px;
+    line-height: 1.3rem;
 }
 
 form {
@@ -91,7 +92,7 @@ button {
     height: var(--button-height);
     border-radius: 50px;
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     background-color: var(--primary);

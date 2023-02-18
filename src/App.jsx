@@ -3,8 +3,6 @@ import './App.css'
 import RatingForm from './components/RatingForm/RatingForm';
 
 function App() {
-
-
   return <>
       <RatingForm />
     </>

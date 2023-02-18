@@ -5,6 +5,7 @@ import './RatingForm.css'
 import IconStar from '../../assets/icon-star.svg'
 import IllustrationThankYoi from '../../assets/illustration-thank-you.svg'
 
+
 function Rate({handleClick, index}) {
   const id = `${index}`
   return <>
