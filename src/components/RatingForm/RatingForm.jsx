@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import './RatingForm.css'
 
 // Assets
-import IconStar from '../../assets/icon-star.svg'
-import IllustrationThankYoi from '../../assets/illustration-thank-you.svg'
-
+import ICON_STAR from '../../assets/icon-star.svg'
+import ILLUSTRATION_THANK_YOU from '../../assets/illustration-thank-you.svg'
+import Button from '../Button/Button'
 
 function Rate({handleClick, index}) {
   const id = `${index}`
@@ -27,30 +27,35 @@ function Form({handleSubmit, handleClick, maxRate = 5, disabled}) {
     )
   }
 
-  return <div className='container'>
-    <img alt='star' src={IconStar} className='star' />
-    <h1>How did we do?</h1>
-    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-    <form onSubmit={handleSubmit}>
-      <div className="rate-container">
-        {radios}
+  return (
+    <div className='modal rate-form-container'>
+      <div className='star-container'>
+        <img alt='star' src={ICON_STAR} className='star' />
       </div>
-      <button disabled={disabled}>Submit</button>
-    </form>
-  </div>
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <form onSubmit={handleSubmit}>
+        <div className="rate-container">
+          {radios}
+        </div>
+        <Button className="btn btn-primary" disabled={disabled}>Submit</Button>
+      </form>
+    </div>
+  )
 }
 
 function ResultForm({rate, maxRate = 5}) {
-  return <div className='container result-container'>
-      <img src={IllustrationThankYoi} alt="thank you" />
-      <h2>You selected {rate} out of {maxRate}</h2>
+  console.log("result")
+  return <div className='modal result-container'>
+      <img src={ILLUSTRATION_THANK_YOU} alt="thank you" />
+      <div className='result'><span>You selected {rate} out of {maxRate}</span></div>
       <h1>Thank you!</h1>
       <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
   </div>
 }
 
 function RatingForm() {
-  const [rate, setRate] = useState(0)
+  const [rate, setRate] = useState(5)
   const [isSubmit, setIsSubmit] = useState(false)
   const maxRate = 5
 
@@ -60,11 +65,11 @@ function RatingForm() {
 
   function handleSubmit(e) {
     // Trigger animation rotate3d
-    document.querySelector(".container").classList.add("rotate3d-right")
+    document.querySelector(".modal").classList.add("rotate3d-right")
     // Wait animation end before mount <Form /> component
     setTimeout(() => {
       setIsSubmit(true)
-  }, 300)
+    }, 300)
     e.preventDefault()
   }
 
@@ -74,7 +79,7 @@ function RatingForm() {
       <Form 
         handleSubmit={handleSubmit}
         handleClick={handleClick}
-        disabled={rate > 0 ? false : true}
+        // disabled={rate > 0 ? false : true}
         maxRate={maxRate} />}
   </>
 }

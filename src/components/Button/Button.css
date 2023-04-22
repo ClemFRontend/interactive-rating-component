@@ -1,0 +1,33 @@
+.btn {
+    transition: all 0.2s ease-out;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    cursor: default;
+}
+
+.btn-primary {
+    height: 45px;
+    border-radius: 50px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    padding-top: 6px;
+    background-color: var(--orange);
+}
+
+.btn-primary:hover {
+    color: var(--orange);
+    background-color: white;
+}
+
+.btn-primary:disabled {
+    background-color: var(--medium-grey);
+    opacity: 0.5;
+    color: white;
+}

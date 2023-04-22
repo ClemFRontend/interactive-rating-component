@@ -4,6 +4,7 @@ import RatingForm from './components/RatingForm/RatingForm';
 
 function App() {
   return <>
+      <div className="design"></div>
       <RatingForm />
     </>
 }
