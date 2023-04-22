@@ -1,29 +1,50 @@
-# Frontend mentor interactive-rating-component challenge
+![](./images/result-desktop.png)
 
-This is the [Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) challenge called interactive-rating-component.
+# Frontend Mentor - Interactive card details form solution
 
-This project is written in ReactJS and CSS and he was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Interactive rating component](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI/hub) 🎉
 
-## Result
+## Table of contents
 
-This next picture is the result of the challenge
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [In addition](#in-addition)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Difficulties](#difficulties)
+- [Author](#author)
 
-> left : design, right : result coded
+## Overview
 
-![Result](./images/result.png)
+### The challenge
 
-Some cool animations was added to a better render ✅
+Your challenge is to build out this interactive rating component and get it looking as close to the design as possible.
 
-## How to start project
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-In the project directory, you can run:
+Your users should be able to:
 
-```
-npm start
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Select and submit a number rating
+- See the "Thank you" card state after submitting a rating
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### In addition
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- I added cool animation, tell me if you like it 😎
+
+### Links
+
+- Solution URL: [See source code](https://github.com/ClemFRontend/interactive-rating-component)
+- Live Site URL: [interactive-rating-component-git-master-clemfrontend.vercel.app](https://interactive-rating-component-git-master-clemfrontend.vercel.app/)
+
+## My process
+
+### Built with
+
+- ⚛️ [React](https://reactjs.org/) - JS library
+
+## Author
+
+- Frontend Mentor - [@ClemFRontend](https://www.frontendmentor.io/profile/ClemFRontend)
