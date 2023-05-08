@@ -1,6 +1,6 @@
-![](./images/result-desktop.png)
-
 # Frontend Mentor - Interactive card details form solution
+
+![](./images/result-desktop.png)
 
 This is a solution to the [Interactive rating component](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI/hub) 🎉
 
@@ -12,7 +12,6 @@ This is a solution to the [Interactive rating component](https://www.frontendmen
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Difficulties](#difficulties)
 - [Author](#author)
 
 ## Overview
